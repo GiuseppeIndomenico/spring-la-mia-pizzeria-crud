@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+	<link th:rel="stylesheet" th:href="@{/webjars/bootstrap/5.3.2/css/bootstrap.min.css}" />
+	<link rel="stylesheet" th:href="@{/css/style.css}">
+<title>Insert title here</title>
+</head>
+<body th:object="${pizza}">
+	[[*{nome}]] - [[*{prezzo}]] &euro; <br />
+	<small>[[*{descrizione}]]</small> <br />	
+	 <img th:src="${pizza.foto}">	
+	 
+	 	<script th:src="@{/webjars/bootstrap/5.3.2/js/bootstrap.bundle.min.js}"></script>
+</body>
+</html>
