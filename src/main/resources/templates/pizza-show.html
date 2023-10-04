@@ -1,16 +1,37 @@
 <!DOCTYPE html>
 <html>
+
 <head>
-<meta charset="UTF-8">
+	<meta charset="UTF-8">
 	<link th:rel="stylesheet" th:href="@{/webjars/bootstrap/5.3.2/css/bootstrap.min.css}" />
 	<link rel="stylesheet" th:href="@{/css/style.css}">
-<title>Insert title here</title>
+	<title>pizza-show</title>
 </head>
-<body th:object="${pizza}">
-	[[*{nome}]] - [[*{prezzo}]] &euro; <br />
-	<small>[[*{descrizione}]]</small> <br />	
-	 <img th:src="${pizza.foto}">	
-	 
-	 	<script th:src="@{/webjars/bootstrap/5.3.2/js/bootstrap.bundle.min.js}"></script>
+
+<body>
+
+
+	<script th:src="@{/webjars/bootstrap/5.3.2/js/bootstrap.bundle.min.js}"></script>
 </body>
+
+<body class="bg-info-subtle">
+	<div class="container" th:object="${pizza}">
+
+		<h1 class="text-danger text-center display-2 fw-bold text-capitalize">[[*{nome}]]</h1>
+		<div class="d-flex flex-column align-items-center justify-content-center">
+
+			<em class="fw-bold">[[*{descrizione}]]</em> 
+		<h6>
+			prezzo: - [[*{prezzo}]] &euro; <br />
+	
+		</h6>
+			<img class="img-fluid" th:src="${pizza.foto}">
+
+		</div>
+
+	</div>
+
+	<script th:src="@{/webjars/bootstrap/5.3.2/js/bootstrap.bundle.min.js}"></script>
+</body>
+
 </html>

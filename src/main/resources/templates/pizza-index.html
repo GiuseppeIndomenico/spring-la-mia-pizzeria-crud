@@ -8,15 +8,18 @@
 	<title>pizza-index</title>
 </head>
 
-<body>
-	<h1 class="text-danger">pizze:</h1>
-	<ul>
-		<li th:each="pizza : ${pizze}" th:object="${pizza}">
-			<a th:href="@{/pizze/{id}(id=*{id})}">
+<body class="bg-info-subtle">
+	<div class="container">
+		
+	<h1 class="text-danger text-center display-2 fw-bold">Pizze!</h1>
+	<ul class="row">
+		<li class="col-6 text-center mb-3" th:each="pizza : ${pizze}" th:object="${pizza}">
+			<a class="text-primary fw-bold btn btn-warning" th:href="@{/pizze/{id}(id=*{id})}">
 				[[*{nome}]] - [[*{prezzo}]] &euro;
 			</a>
 		</li>
 	</ul>
+	</div>
 	
 		<script th:src="@{/webjars/bootstrap/5.3.2/js/bootstrap.bundle.min.js}"></script>
 </body>
