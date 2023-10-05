@@ -8,32 +8,36 @@
 	<title>pizza-index</title>
 </head>
 
-<body class="bg-info-subtle">
-	<div class="bg-primary shadow">
+<body>
 
-	<div class=" container d-flex align-items-center justify-content-between mb-5">
-		<h1 class="text-danger text-center fw-bold">Pizze!</h1>
-	
-		<form class="d-flex w-50" action="/pizze/search" method="get">
-			<input class="w-75 me-2" type="text" name="nome" placeholder="cerca la tua pizza preferita">
-			<button class="btn btn-outline-danger fw-bold" type="submit">Cerca</button>
-		</form>
-	</div>
 
-	</div>
-	<div class="container">
-		<div class="card p-3 shadow">
-			<ul class="row p-0 py-3">
-				<li class="col-6 text-center mb-3" th:each="pizza : ${pizze}" th:object="${pizza}">
-					<a class="text-primary fw-bold btn btn-warning" th:href="@{/pizze/{id}(id=*{id})}">
-						[[*{nome}]] - [[*{prezzo}]] &euro;
-					</a>
-				</li>
-			</ul>
+	<div class="bg-i container min-vh-100">
+		<div class="bg-primary shadow fixed-top">
+
+			<div class=" container d-flex align-items-center justify-content-between">
+				<h1 class="text-danger text-center fw-bold">Pizze!</h1>
+
+				<form class="d-flex w-50" action="/pizze/search" method="get">
+					<input class="w-75 me-2" type="text" name="nome" placeholder="cerca la tua pizza preferita">
+					<button class="btn btn-outline-danger fw-bold" type="submit">Cerca</button>
+				</form>
+			</div>
 
 		</div>
-	</div>
+		<div class="container d-flex align-items-center justify-content-center">
+			<div class="card p-3 shadow">
+				<ul class="row p-0 py-3">
+					<li class="col-4 text-center mb-5" th:each="pizza : ${pizze}" th:object="${pizza}">
+						<a class="text-primary fw-bold btn btn-warning" th:href="@{/pizze/{id}(id=*{id})}">
+							[[*{nome}]] - [[*{prezzo}]]&euro;
+						</a>
+					</li>
+				</ul>
 
+			</div>
+		</div>
+
+	</div>
 	<script th:src="@{/webjars/bootstrap/5.3.2/js/bootstrap.bundle.min.js}"></script>
 </body>
 
