@@ -28,7 +28,7 @@
 			<div class="card p-3 shadow">
 				<ul class="row p-0 py-3">
 					<li class="col-4 text-center mb-5" th:each="pizza : ${pizze}" th:object="${pizza}">
-						<a class="text-primary fw-bold btn btn-warning" th:href="@{/pizze/{id}(id=*{id})}">
+						<a class="text-primary fw-bold btn btn-warning shadow" th:href="@{/pizze/{id}(id=*{id})}">
 							[[*{nome}]] - [[*{prezzo}]]&euro;
 						</a>
 					</li>

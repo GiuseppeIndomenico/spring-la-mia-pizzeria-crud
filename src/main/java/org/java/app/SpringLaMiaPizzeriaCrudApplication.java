@@ -33,9 +33,9 @@ public class SpringLaMiaPizzeriaCrudApplication implements CommandLineRunner {
 		Pizza pizza5 = new Pizza("diavola", "pomodoro, mozzarella, origano, salame piccante",
 				"https://www.negroni.com/sites/negroni.com/files/styles/scale__1440_x_1440_/public/pizza_rustica.jpg?itok=Lbp_jtZW",
 				5);
-		Pizza pizza6 = new Pizza("bronte", "mozzarella, mortadella, granella di pistacchio basilico",
+		Pizza pizza6 = new Pizza("bronte", "mozzarella di bufala, mortadella DOP, granella di pistacchio, basilico",
 				"https://www.mysocialrecipe.com/files/admin/immagini/pistacchiosa1-master.jpg",
-				5);
+				10);
 		pizzaService.save(pizza1);
 		pizzaService.save(pizza2);
 		pizzaService.save(pizza3);

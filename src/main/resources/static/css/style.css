@@ -19,3 +19,16 @@ a{
 .bg-i{
 	background-color: rgba(255, 196, 51, 0.9);
 }
+
+.display-2{
+	text-shadow: 7px 5px 7px black;
+}
+
+h1{
+	text-shadow: 5px 4px 4px rgb(33, 33, 33);
+}
+
+.gi-show{
+	background-color: rgba(255, 255, 255, .8);
+	padding: 1rem
+}
