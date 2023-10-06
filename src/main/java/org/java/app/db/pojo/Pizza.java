@@ -5,6 +5,8 @@ import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
+import jakarta.validation.constraints.Min;
+import org.hibernate.validator.constraints.Length;
 
 @Entity
 public class Pizza {
@@ -13,10 +15,13 @@ public class Pizza {
 	private int id;
 
 	@Column(length = 128, nullable = false)
+	@Length(min = 3, max = 128, message = "Il nome deve essere di almeno tre caratteri")
+
 	private String nome;
+
 	private String descrizione;
 
-
+	@Min(value = 1, message = "Il prezzo deve essere un numero intero maggiore di zero")
 	private int prezzo;
 
 	private String foto;
